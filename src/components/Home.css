@@ -1,0 +1,207 @@
+/* Home.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(45deg, #0084ff 30%, #FF8E53 90%);
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 50px 50px;
+}
+
+.feature-card {
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.hero-gradient {
+  background: linear-gradient(45deg, #0084ff 30%, #FF8E53 90%);
+}
+
+.feature-card {
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.step-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(25, 118, 210, 0.1) 0%,
+    rgba(25, 118, 210, 0.05) 100%
+  );
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-icon {
+  font-size: 1.5rem;
+}
+
+.feature-icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero-button {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.hero-button:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.divider {
+  margin: 64px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  height: 2px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  .hero-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .hero-section h5 {
+    font-size: 1rem;
+  }
+
+  .feature-card {
+    margin-bottom: 1rem;
+  }
+
+  .step-card {
+    padding: 1rem;
+  }
+
+  .avatar-icon, .feature-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card, .step-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Hover effects */
+.feature-card:hover, .step-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Button animations */
+.cta-section button {
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Avatar hover effect */
+.MuiAvatar-root {
+  transition: all 0.3s ease-in-out;
+}
+
+.MuiAvatar-root:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Typography enhancements */
+.MuiTypography-h2, .MuiTypography-h3, .MuiTypography-h4 {
+  font-weight: 700 !important;
+}
+
+.MuiTypography-h5, .MuiTypography-h6 {
+  font-weight: 600 !important;
+}
+
+/* Card content spacing */
+.MuiCardContent-root {
+  padding: 24px !important;
+}
+
+/* Hero section enhancement */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.1)
+  );
+}

@@ -1,0 +1,210 @@
+/* Notes Container */
+.notes-container {
+  padding: 20px;
+}
+
+/* New note button container and label */
+.new-note-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.new-note-button-container:hover .new-note-button {
+  background-color: #e0e0e0 !important;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 132, 255, 0.2);
+}
+
+.new-note-label {
+  margin-top: 10px !important;
+  color: #0084ff !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  text-align: center;
+}
+
+/* New note button styles */
+.new-note-button {
+  width: 120px;
+  height: 150px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0 !important;
+  border: 2px dashed #0084ff !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+
+.new-note-button:hover {
+  background-color: #e0e0e0 !important;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 132, 255, 0.2);
+}
+
+.new-note-button .document-icon {
+  font-size: 50px;
+  color: #0084ff;
+  margin-bottom: 10px;
+}
+
+.new-note-button .plus-icon {
+  font-size: 24px;
+  color: #0084ff;
+  position: absolute;
+  bottom: 30px;
+}
+
+/* Recent notes title */
+.recent-notes-title {
+  margin-bottom: 20px !important;
+  color: #333;
+  font-weight: 600 !important;
+}
+
+/* Note card styles */
+.note-card {
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e0e0e0 !important;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.note-card .note-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  color: #0084ff;
+}
+
+.note-card .note-content {
+  padding-left: 50px;
+  padding-top: 15px;
+  height: 100%;
+}
+
+.note-card .note-title {
+  font-weight: bold !important;
+  color: #333;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-card .note-timestamp {
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.note-card .note-preview {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.note-card .delete-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #ff4444;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.note-card:hover .delete-icon {
+  opacity: 1;
+}
+
+.note-card .delete-icon:hover {
+  transform: scale(1.1);
+  color: #cc0000;
+}
+
+/* Editor styles */
+.editor-container {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.quill {
+  height: 600px;
+}
+
+.ql-container {
+  height: 500px !important;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.ql-editor {
+  padding: 20px;
+  min-height: 500px;
+  line-height: 1.6;
+}
+
+.ql-toolbar {
+  background-color: #f8f9fa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 8px !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Editor content styles */
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.ql-editor p {
+  margin-bottom: 1em;
+}
+
+/* No notes message */
+.no-notes-message {
+  text-align: center;
+  color: #666;
+  margin-top: 30px;
+}
+
+.page-title {
+  color: #333;
+  margin-bottom: 30px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  color: #0084ff;
+  font-size: 1.2em;
+}

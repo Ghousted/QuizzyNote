@@ -1,0 +1,348 @@
+.flashcards-container {
+  padding: 20px;
+}
+
+.page-title {
+  color: #333;
+  margin-bottom: 30px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  color: #0084ff;
+  font-size: 1.2em;
+}
+
+.refresh-button {
+  margin-bottom: 20px !important;
+  color: #0084ff !important;
+  border-color: #0084ff !important;
+}
+
+.refresh-button:hover {
+  background-color: rgba(0, 132, 255, 0.1) !important;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  margin: 20px 0 !important;
+}
+
+.section-icon {
+  color: #0084ff;
+}
+
+.flashcard-group-accordion {
+  margin-bottom: 10px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.group-summary {
+  background-color: #f5f5f5 !important;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.group-icon {
+  color: #0084ff;
+}
+
+.card-count {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 5px;
+}
+
+/* Flashcard styling */
+.flashcard {
+  perspective: 1000px;
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+}
+
+.flashcard-content {
+  height: 100%;
+  padding: 16px !important;
+  position: relative;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.flashcard-front {
+  background-color: #fff;
+}
+
+.flashcard-back {
+  background-color: #f8f8f8;
+  transform: rotateY(180deg);
+}
+
+.card-text {
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 100%;
+  padding: 10px;
+}
+
+/* Delete button */
+.delete-button {
+  position: absolute !important;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  color: #ff4444 !important;
+  opacity: 0;
+  transition: opacity 0.3s ease !important;
+}
+
+.flashcard:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  color: #cc0000 !important;
+}
+
+/* Scrollbar styling */
+.card-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.card-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Grid layout */
+.cards-grid {
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .flashcard {
+    height: 150px;
+  }
+
+  .card-text {
+    font-size: 0.9rem !important;
+  }
+
+  .page-title {
+    font-size: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Card hover effects */
+.flashcard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flashcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Animation for card flipping */
+@keyframes flipIn {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Group accordion styling */
+.flashcard-group-accordion {
+  transition: all 0.3s ease;
+}
+
+.flashcard-group-accordion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+}
+
+.group-details {
+  background-color: #fafafa;
+}
+
+/* Loading state */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Error state */
+.error-message {
+  color: #ff4444;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+/* ... (existing styles) */
+
+/* Delete button for groups */
+.delete-group-button {
+  color: #ff4444 !important;
+  margin-left: auto !important;
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease !important;
+}
+
+.flashcard-group-accordion:hover .delete-group-button {
+  opacity: 1;
+}
+
+.delete-group-button:hover {
+  color: #cc0000 !important;
+}
+
+/* Update group summary to accommodate the delete button */
+.group-summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.group-title {
+  flex-grow: 1;
+}
+
+
+.flashcard-group-accordion {
+  margin-bottom: 10px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.group-summary {
+  background-color: #f5f5f5 !important;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.group-icon {
+  color: #0084ff;
+}
+
+.card-count {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 5px;
+}
+
+.group-timestamp {
+  margin-left: auto;
+  color: #666;
+  font-size: 0.8em;
+}
+
+.delete-group-button {
+  color: #ff4444 !important;
+  margin-left: 10px !important;
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease !important;
+}
+
+.flashcard-group-accordion:hover .delete-group-button {
+  opacity: 1;
+}
+
+.delete-group-button:hover {
+  color: #cc0000 !important;
+}
+
+.group-details {
+  background-color: #fafafa;
+}
+
+.no-flashcards-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-flashcards-message {
+  text-align: center;
+  padding: 48px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  color: #6c757d;
+  font-size: 1.1rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 2px dashed #dee2e6;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.no-flashcards-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+}

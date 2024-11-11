@@ -1,0 +1,20 @@
+/* In your App.css or index.css */
+body {
+    background: linear-gradient(135deg, #fdf5e2 0%, #fff1e6 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* In your Dashboard.css */
+  .content-area {
+    background-color: rgba(255, 255, 255, 0.9); /* slightly transparent white */
+    backdrop-filter: blur(10px); /* creates a frosted glass effect */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+  
+  .sidebar {
+    background-color: #fad0c4;
+    /* ... rest of your sidebar styles ... */
+  }
