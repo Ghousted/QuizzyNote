@@ -184,7 +184,7 @@
   }
 
   .sidebar.closed {
-    transform: translateX(-100%);
+    transform: translateX(-60%);
     width: 60px;
   }
 
