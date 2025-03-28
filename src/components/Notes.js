@@ -143,7 +143,7 @@ function Notes() {
     setError(null);
 
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro-exp-03-25" });
 
       const prompt = `Generate flashcards from this note content. Format as JSON array with "front" (question) and "back" (answer) properties. Keep answers concise.
 
